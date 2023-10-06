@@ -1,20 +1,44 @@
 .card {
+  position: relative;
+  
 
-    &__link {
-    }
+  @media (min-width: 580px) {
+    display: grid;
+    grid-template-areas: 
+    "img img"
+    "title price"
+    "btn btn";
+  }
 
-    &__image {
+  &__link {
+    
+    &_img {
+        grid-area: img;
+        margin-bottom: 12px;
     }
+  }
 
-    &__title {
-    }
+  &__image {
+    
+  }
 
-    &__price {
-    }
+  &__title {
+    grid-area: title;
+    margin-bottom: 4px;
+  }
 
-    &__btn {
-    }
+  &__price {
+    grid-area: price;
+    margin-bottom: 12px;
+  }
 
-    &__favorite {
-    }
+  &__btn {
+    grid-area: btn;
+  }
+
+  &__favorite {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
 }
