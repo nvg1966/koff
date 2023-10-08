@@ -4,6 +4,7 @@ import Navigo from "navigo";
 import { Header } from "./modules/Header/Header";
 import { Main } from "./modules/Main/Main";
 import { Footer } from "./modules/Footer/Footer";
+import { ProductList } from "./modules/ProductList/ProductList";
 
 const productSlider = () => {
   Promise.all([import("swiper/modules"), import("swiper"), import("swiper/css")]).then(
@@ -42,14 +43,45 @@ const Init = () => {
   const router = new Navigo("/", { linksSelector: 'a[href^="/"]' });
   router
     .on("/", () => {
-      console.log("на главной");
+      new ProductList().mount(new Main().element, [1]);
+    }, {    
+      // before(done)  {
+      //   console.log("before");
+      //   done();
+      // },      
+      // after() {
+      //   console.log("after");
+      // },     
+      leave(done) {
+        console.log("leave");
+        done();
+      },     
+      already() {
+        console.log("already");
+      },
     })
-    .on("/category", (obj) => {
-      console.log("категория - ", obj);
-    })
+    .on("/category", () => {      
+      
+        new ProductList().mount(new Main().element, [1, 2, 3, 4, 5, 6], 'Категория');
+      },
+        {
+          leave(done) {
+            console.log("leave");
+            done();
+          },
+        }
+    )
     .on("/favorite", () => {
-      console.log("избранное");
-    })
+      
+        new ProductList().mount(new Main().element, [1, 2, 3], 'Избранное');
+      },
+        {
+          leave(done) {
+            console.log("leave");
+            done();
+          },
+        }
+    )
     .on("/search", () => {
       console.log("поиск");
     })
@@ -63,8 +95,14 @@ const Init = () => {
       console.log("заказ");
     })
     .notFound(() => {
-      document.body.innerHTML ='<h2>Страница не найдена</h2>';
-      console.log(404);
+      new Main().element.innerHTML = `
+        <h2>Страница не найдена</h2>
+        <p>Через 5 секунд вы будете перенаправлены на <a href="/">главную страницу</a></p>
+      `;    
+      setTimeout(() => {
+        router.navigate('/');
+      }, 5000);
+
     });
 
   router.resolve();
