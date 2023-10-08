@@ -36,7 +36,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path
               d="M8.41337 13.8733C8.18671 13.9533 7.81337 13.9533 7.58671 13.8733C5.65337 13.2133 1.33337 10.46 1.33337 5.79332C1.33337 3.73332 2.99337 2.06665 5.04004 2.06665C6.25337 2.06665 7.32671 2.65332 8.00004 3.55998C8.67337 2.65332 9.75337 2.06665 10.96 2.06665C13.0067 2.06665 14.6667 3.73332 14.6667 5.79332C14.6667 10.46 10.3467 13.2133 8.41337 13.8733Z"
-              stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round" />
+              stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </a>
         <a href="/card" class="header__link">
@@ -128,6 +128,7 @@
               <a class="card__link card__link_img" href="/product">
                 <img class="card__img" src="/img/photo.jpg" alt="Кресло с подлокотниками">
               </a>
+
               <div class="card__info">
                 <h3 class="card__title">
                   <a class="card__link" href="/product">
@@ -136,6 +137,7 @@
                 </h3>
                 <p class="card__price">5&nbsp;000&nbsp;₽</p>
               </div>
+
               <button class="card__btn">В корзину</button>
               <button class="card__favorite">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -174,7 +176,7 @@
           <li class="goods__item">
             <article class="goods__card card">
               <a class="card__link card__link_img" href="/product">
-                <img class="card__img" src="/img/photo.jpg" alt="Кресло с подлокотниками">
+                <img class="card__img" src="https://swiperjs.com/demos/images/nature-2.jpg" alt="Кресло с подлокотниками">
               </a>
               <div class="card__info">
                 <h3 class="card__title">
@@ -223,40 +225,40 @@
     </section>
 
     <section class="product">
-      <div class="container">
+      <div class="container product__container">
         <h2 class="product__title">Кресло с подлокотниками</h2>
         <div class="product__picture">
           <div class="swiper product__slider-main">
             <div class="swiper-wrapper product__main-list">
               <div class="swiper-slide product__slide">
-                <img src="/img/photo.jpg">
+                <img class="product__image" src="/img/photo.jpg">
               </div>
               <div class="swiper-slide product__slide">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg">
+                <img class="product__image" src="https://swiperjs.com/demos/images/nature-2.jpg">
               </div>
               <div class="swiper-slide product__slide">
-                <img src="https://swiperjs.com/demos/images/nature-3.jpg">
+                <img class="product__image" src="https://swiperjs.com/demos/images/nature-3.jpg">
               </div>
               <div class="swiper-slide product__slide">
-                <img src="https://swiperjs.com/demos/images/nature-4.jpg">
+                <img class="product__image" src="https://swiperjs.com/demos/images/nature-4.jpg">
               </div>
               <div class="swiper-slide product__slide">
-                <img src="https://swiperjs.com/demos/images/nature-5.jpg">
+                <img class="product__image" src="https://swiperjs.com/demos/images/nature-5.jpg">
               </div>
               <div class="swiper-slide product__slide">
-                <img src="https://swiperjs.com/demos/images/nature-6.jpg">
+                <img class="product__image" src="https://swiperjs.com/demos/images/nature-6.jpg">
               </div>
               <div class="swiper-slide product__slide">
-                <img src="https://swiperjs.com/demos/images/nature-7.jpg">
+                <img class="product__image" src="https://swiperjs.com/demos/images/nature-7.jpg">
               </div>
               <div class="swiper-slide product__slide">
-                <img src="https://swiperjs.com/demos/images/nature-8.jpg">
+                <img class="product__image" src="https://swiperjs.com/demos/images/nature-8.jpg">
               </div>
               <div class="swiper-slide product__slide">
-                <img src="https://swiperjs.com/demos/images/nature-10.jpg">
+                <img class="product__image" src="https://swiperjs.com/demos/images/nature-10.jpg">
               </div>
             </div>
-            <button class="product__arrow product__arrow-next">
+            <button class="product__arrow product__arrow_next">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <rect width="32" height="32" rx="16" transform="matrix(-1 0 0 1 32 0)" fill="white"
                   fill-opacity="0.4" />
@@ -265,7 +267,7 @@
                   fill="#1C1C1C" />
               </svg>
             </button>
-            <button class="product__arrow product__arrow-prev">
+            <button class="product__arrow product__arrow_prev">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <rect width="32" height="32" rx="16" fill="white" fill-opacity="0.4" />
                 <path
@@ -277,7 +279,7 @@
           <div class="swiper product__slider-thumbnails">
             <div class="swiper-wrapper product__thumbnails-list">
               <div class="swiper-slide product__thumbnails-slide">
-                <img src="/img/photo.jpg">
+                <img class="product__thumbnails-img" src="/img/photo.jpg">
               </div>
               <div class="swiper-slide product__thumbnails-slide">
                 <img class="product__thumbnails-img" src="https://swiperjs.com/demos/images/nature-2.jpg">
@@ -398,11 +400,11 @@
             <p class="cart__place-price">20 000 ₽</p>
           </div>
           <p class="cart__place-delivery">Доставка 0 ₽</p>
-          <button class="cart__place-btn" type="submit" form="order"></button>
+          <button class="cart__place-btn" type="submit" form="order">Оформить заказ</button>
         </div>
 
         <form class="cart__form form-order" id="order" action="#" method="post">
-          <h3 class="cart__subtitle">Данные для доставки</h3>
+          <h3 class="cart__subtitle cart__subtitle_form-order">Данные для доставки</h3>
           <fieldset class="form-order__fieldset form-order__fieldset_input">
             <input class="form-order__input" type="text" name="name" placeholder="Фамилия Имя Отчество">
             <input class="form-order__input" type="tel" name="phone" placeholder="Телефон">

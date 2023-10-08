@@ -1,22 +1,12 @@
 .card {
   position: relative;
 
-  @media (min-width: 580px) {
-    display: grid;
-    grid-template-areas:
-      "img img"
-      "title price"
-      "btn btn";
-  }
-
   &__link {
     &_img {
       display: block;
       margin-bottom: 12px;
+
       @media (min-width: 580px) {
-        grid-area: img;
-      }
-      @media (min-width: 820px) {
         margin-bottom: 16px;
       }
     }
@@ -26,6 +16,15 @@
     width: 100%;
     object-fit: cover;
     border-radius: 16px;;
+    aspect-ratio: 151/125;
+  }
+
+  &__info {
+    @media (min-width: 580px) {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
@@ -34,8 +33,9 @@
     font-weight: 400;
 
     @media (min-width: 580px) {
+      padding-top: 3px;
       font-size: 16px;
-      grid-area: title;
+      margin-bottom: 0;
     }
   }
 
@@ -44,7 +44,7 @@
     font-size: 16px;
     @media (min-width: 580px) {
       font-size: 20px;
-      grid-area: price;
+      margin-bottom: 0;
     }    
   }
 
@@ -54,9 +54,6 @@
     color: #780096;
     border-radius: 32px;
     border: 1px solid #780096;
-    @media (min-width: 580px) {
-      grid-area: btn;
-    }     
   }
 
   &__favorite {

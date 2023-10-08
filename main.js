@@ -15,8 +15,8 @@ const productThumbnails = new Swiper(".product__slider-thumbnails", {
 new Swiper(".product__slider-main", {
   spaceBetween: 10,
   navigation: {
-    nextEl: ".product__arrow-next",
-    prevEl: ".product__arrow-prev",
+    nextEl: ".product__arrow_next",
+    prevEl: ".product__arrow_prev",
   },
   modules: [Navigation, Thumbs],
   thumbs: {
